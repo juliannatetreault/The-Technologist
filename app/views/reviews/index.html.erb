@@ -23,7 +23,7 @@
   <div class="review-sub-label">Written by: <a href="#" class="author" onclick="userReviews(this)" id="<%= review.user_id %>"><%= review.user.username %></a></em></div>
   <div class="review-sub-label">Category: <em><%= review.category.title.titleize %></em></div><br />
   <p id="body-<%= review.id %>"><%= truncate review.content %></p>
-  <button class="show-more" data-id="<%= review.id %>">Show More</button>
+  <div class="button left"><button class="show-more" data-id="<%= review.id %>">Show More</button></div><br />
   <p class="timestamp">Published:  <em><%= review.created_at.strftime("%d/%m/%Y %H:%M") %></em></p>
 <% end %>
 </div>
