@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-before_action :set_review, only: [:show, :update, :edit, :destroy, :body]
+before_action :set_review, only: [:show, :update, :edit, :destroy]
 before_action :is_authorized?, except: [:index, :show, :new, :create]
 
     def index
