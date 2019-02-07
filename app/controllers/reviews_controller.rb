@@ -18,10 +18,6 @@ before_action :is_authorized?, except: [:index, :show, :new, :create]
       end
     end
 
-    # def body
-    #   render plain: @review.content
-    # end
-
     def new
       @review = Review.new(user_id: current_user.id)
       @categories = Category.all 
