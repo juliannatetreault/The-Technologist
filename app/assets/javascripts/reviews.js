@@ -7,6 +7,7 @@ $(document).ready(() => {
 function attachListeners() {
    // $('.author').click(userReviews) // Renders an individual user's reviews on click
     $('.new-form').click(newReview) // Renders a new review form on click
+   // $('#show-more').click(expandReview)
 }
 
 // Submits search form without a page refresh
@@ -43,13 +44,13 @@ renderToPage() {
 } 
 
 // Extends truncated review on button click
-Review.prototype.extendReview = $(function () {
+Review.prototype.expandReview = $(function () {
     $(".show-more").on('click', function() {
       let id
       id = $(this).data("id");
       // debugger
-      $.get("/reviews/" + id + "/body", function(data) {
-        $("#body-" + id).text(data);
+      $.get("/reviews/" + id + ".json", function(data) {
+        $("#body-" + id).text(data.content);
       });
     });
   });
@@ -95,6 +96,10 @@ function newReview() {
        )
     });
 }
+
+// function formatDate () {
+//  let timestamp = new Date(created_at).toDateString();
+// }
 
 
 
@@ -178,4 +183,3 @@ function newReview() {
 //     $(document).ready(() => {
 //         console.log("ready!");
 //     });
-  
