@@ -1,6 +1,6 @@
 # THE TECHNOLOGIST APP
 
-The Technologist is a Rails and JavaScript-based application that allows users to create byte-sized tech reviews. Users can choose to create an account of their own to publish and read reviews. If a user chooses to bypass creating an account, that user still has the ability to read reviews from other account-holding publishers.
+The Technologist is a Rails and JavaScript-based application that allows users to create byte-sized tech reviews. Users can choose to create an account or singin through their existing GitHub account to publish and read reviews. If a user chooses to bypass creating an account, that user still has the ability to read reviews from other account-holding publishers.
 
 ## Usage
 
